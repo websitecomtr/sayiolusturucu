@@ -1,0 +1,251 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayı Oluşturucu</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        /*$main START*/
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background: #000321;
+    width:100%;
+    height: 140%;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/*main END*/
+
+
+
+/*$container #START*/
+
+#container{
+    background: url(bacground\ city\ caar.svg) no-repeat;
+    background-size: cover;
+    width:100%;
+    height: 140%;
+}
+
+
+
+/*$header START*/
+
+header{
+    width:100%;
+    height: 4rem;
+    background: #E9E00C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#sayiOtext{
+    font-family: sans-serif;
+    margin-left: 1.5rem;
+    font-size: 1.9rem;
+    line-height: 4rem;
+    color: #fff;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*header END*/
+
+
+/*$content START*/
+
+
+#content{
+    display: flex;
+    justify-content: center;
+}
+
+
+#circleLarge{
+    margin-top: 16.6rem;
+    width:26.7rem;
+    height: 26.7rem;
+    border: 1.43036px solid rgba(233, 224, 12, 0.9);
+    border-radius:100%;
+    filter: drop-shadow(0px 0px 1px rgba(233, 224, 12, 0.9));
+}
+
+#createText{
+    display: flex;
+    justify-content: center;
+    font-size: 4.8rem;
+    font-family: sans-serif;
+    line-height: 26.7rem;
+    color: rgba(233, 224, 12, 0.9);
+}
+
+
+
+
+#circleSmall {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-top: 50rem;
+}
+
+
+
+#circleSmall img{
+    width:100%;
+    
+}
+
+
+
+#contentText{
+    position: absolute;
+    top: 71.3rem;
+    color: rgba(254, 11, 11, 0.6);
+    font-family: sans-serif;
+    font-size: 1.2rem;
+}
+
+/*content END*/
+
+
+/*$footer START*/
+
+footer{
+    width: 100%;
+    height:4rem;
+    background: rgba(115, 110, 0, 0.56);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    line-height: 4rem;
+    font-family: sans-serif;
+    color: rgb(255, 248, 182);
+}
+
+/*footer END*/
+
+/*container END*/
+
+ekranK{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*$media START*/
+
+
+@media screen and (max-width:270px) {
+    #container{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
+    body{
+        background: white;
+    }
+
+    ekranK{
+        color: black;
+        font-size:1.5rem;
+        display: block;
+    }
+
+    ekranK span{
+        font-size: 1.6rem;
+        color: red;
+    }
+}
+
+
+
+
+
+
+
+
+/*meadia END*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <ekranK>Malesef cihazınız sitemizi açmak için fazlasıyla küçük. üzgünüz <span>:(</span></ekranK>
+    <!--$container START-->
+    <div id="container">
+        <!--$header START-->
+        <header>
+            <div id="sayiOtext">Sayı Oluşturucu</div>
+        </header>
+        <!--header END-->
+
+
+        <!--$content START-->
+        <div id="content">
+            <div id="circleLarge">
+                <div id="createText">Oluştur</div>
+            </div>
+            <div id="circleSmall" onclick="circleBtnclick()"><img id="btnRsm" src="btnA1.svg" alt=""></div>
+            <div id="contentText">1/100 arası rastgele sayı üretir</div>
+        </div>
+        <!--content END-->
+    </div>
+    <!--container END-->
+
+
+    <!--$footer START-->
+    <footer>
+        <div id="footerText">CopyRight Tüm Hakları Saklıdır © 2022</div>
+    </footer>
+    <!--footer START-->
+
+    <script>
+
+        function circleBtnclick() {
+    document.getElementById("createText").style.fontSize="6.5rem";
+    document.getElementById("createText").innerHTML=Math.floor(Math.random()*100)+1;
+}
+    </script>
+</body>
+</html>
